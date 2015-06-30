@@ -300,7 +300,7 @@ $(JS_BUILD_PATH)/b/meta.js: $(BUILD_JS_FILES)
 		-x -min.js$
 
 $(BUILD_JSMIN_FILES): $(BUILD_JS_FILES)
-	rm $(JS_BUILD_PATH)/b/meta.js || true
+	rm -f $(JS_BUILD_PATH)/b/meta.js || true
 	scripts/js/jsmin_all.py $@
 
 $(BUILD_JS_FILES): $(DEV_JS_FILES)
